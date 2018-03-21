@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+		<title>Entry</title>
+		<meta name="description" content="This is the entry page">
+	</head>
+	<body>
+		<header>
+			<h1>Entry #{{ blog.id }}</h1>
+			<nav>
+				<a href="{% url 'blog:main' %}">Main</a>
+				<a href="{% url 'blog:bio' %}">Bio</a>
+				<a href="{% url 'blog:tech tips' %}">Tech Tips</a>
+				<a href="{% url 'blog:home' %}">Home</a>
+				<a href="{% url 'blog:archive' %}">Archive</a>
+			</nav>
+		</header>
+		<main>
+			{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+			<article>
+				<h3>{{ blog.title }} - {{ blog.author }}</h3>
+				<p>{{ blog.content }}</p>
+				<p><strong>Posted:</strong> {{ blog.post_date }}
+			</article>
+			{% for comments in blog.comments_set.all reversed %}
+				<article>
+					<h4>{{ comments.nickname }}</h4>
+					<p>{{ comments.content }}</p>
+					<p><strong>Email:</strong> {{ comments.email }}</p>
+					<p><strong>Posted:</strong> {{ comments.post_date }}</p>
+				</article>
+			{% endfor %}
+			<form action="{% url 'blog:new_comment' blog.id %}" method="post">
+				{% csrf_token %}
+				<fieldset>
+					<legend>Add Comment</legend>
+					Nickname:<br>
+					<input type="text" id="nickname" name="nickname"><br>
+					Email:<br>
+					<input type="text" id="email" name="email"><br>
+					Comment:<br>
+					<textarea id="content" name="content"></textarea>
+				</fieldset>
+				<input type="submit" value="Post">
+			</form>
+		</main>
+		<footer>
+			<p>Andrew Shaw</p>
+			<p>Copyright 2018 Andrew Shaw</p>
+			<p>{{ current_time }}</p>
+		</footer>
+	</body>
+</html>

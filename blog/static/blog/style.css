@@ -1,0 +1,109 @@
+body
+{
+	background-image: url("http://cromeyellow.com/wp-content/uploads/2012/03/a8a44f048ef3ab989993b2b6bd3062fd.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+main
+{
+	width: 84%;
+	float: right;
+}
+
+ol, ul
+{
+	text-align: left;
+}
+
+aside
+{
+	float: left;
+	background-color: lightgray;
+	width: 15%;
+	flex: auto;
+	flex-direction: column;
+}
+
+footer
+{
+	clear: both;
+	text-align: center;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+h1
+{
+	text-align: center;
+}
+
+nav
+{
+	border: solid;
+	text-align: center;
+}
+
+article
+{
+	background-color: lightgrey;
+	text-align: center;
+}
+
+article > h4
+{
+	text-align: left;
+}
+
+p
+{
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+nav > a
+{
+	margin-right: 20px;
+}
+
+aside > a
+{
+	display: block;
+}
+
+footer > p
+{
+	text-align: center;
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+textarea
+{
+	width: 100%;
+}
+
+a:link
+{
+	color: blue;
+}
+
+a:visited
+{
+	color: purple;
+}
+
+a:hover
+{
+	color: red;
+}
+
+a:active
+{
+	color: yellow;
+}

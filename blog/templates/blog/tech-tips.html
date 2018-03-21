@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+		<title>Tech Tips</title>
+		<meta name="description" content="This is the tech tips page">
+	</head>
+	<body>
+		<header>
+			<h1>Git Command Cheat Sheet</h1>
+			<nav>
+				<a href="{% url 'blog:main' %}">Main</a>
+				<a href="{% url 'blog:bio' %}">Bio</a>
+				<a href="{% url 'blog:tech tips' %}">Tech Tips</a>
+				<a href="{% url 'blog:home' %}">Home</a>
+				<a href="{% url 'blog:archive' %}">Archive</a>
+			</nav>
+		</header>
+		<main>
+			<article>
+    				<h4>Git Commands:</h4>
+    				<ol>
+      					<li>git init - turn current directory into empty Git repository<br>
+        					<code>git init</code></li>
+		      			<li>git add - add files to staging area for Git<br>
+        					<code>git add index.html</code></li>
+      					<li>git commit - record changes made to files to local repository<br>
+        					<code>git commit -m "Commit Message"</code></li>
+	      				<li>git status - return current repository state<br>
+        					<code>git status</code></li>
+	      				<li>git config - assign Git settings<br>
+        					<code>git config --global user.name "Andrew Shaw"</code></li>
+	      				<li>git merge - combine changes from one branch with another branch<br>
+        					<code>git merge master</code></li>
+      					<li>git branch - determine what branch local repository is on, add new branch, or delete branch<br>
+        					<code>git branch -a</code><br>
+	        				<code>git branch scratch_paper</code><br>
+		        			<code>git branch -d scratch_paper</code></li>
+      					<li>git checkout - switch branches<br>
+        					<code>git checkout scratch_paper</code></li>
+      					<li>git remote - connect local repository with remote repository<br>
+        					<code>git remote add remote_repo remote_URL</code></li>
+		      			<li>git clone - create local working copy of existing remote repository<br>
+        					<code>git clone remote_URL</code></li>
+      					<li>git pull - get latest version of repository<br>
+        					<code>git pull remote_URL master</code></li>
+	      				<li>git push - send local commits to the remote repository<br>
+        					<code>git push remote_repo master</code></li>
+	    			</ol>
+		    		<p>Sources:</p>
+    				<ul>
+      					<li><a href="{% url 'blog:common git commands' %}">Common Git Commands</a></li>
+      					<li><a href="{% url 'blog:basic git commands' %}">Basic Git Commands</a></li>
+		      			<li><a href="{% url 'blog:git reference' %}">Git Reference</a></li>
+    				</ul>
+			</article>
+		</main>
+		<aside>
+			<img src="{% static 'blog/lord-of-the-rings-balrog-francis-lee.jpg' %}" alt="Balrog">
+			<img src="{% static 'blog/4399251-63-img-54.jpg' %}" alt="Boba Fett">
+			<img src="{% static 'blog/United_States_Air_Force_Civil_Engineer_Badge.svg.png' %}" alt="Civil Engineering Badge">
+		</aside>
+		<footer>
+			<p>Andrew Shaw</p>
+			<p>Copyright 2018 Andrew Shaw</p>
+			<p>{{ current_time }}</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+		<title>Main</title>
+		<meta name="description" content="This is the main page">
+	</head>
+	<body>
+		<header>
+			<h1>Main</h1>
+			<nav>
+				<a href="{% url 'blog:main' %}">Main</a>
+				<a href="{% url 'blog:bio' %}">Bio</a>
+				<a href="{% url 'blog:tech tips' %}">Tech Tips</a>
+				<a href="{% url 'blog:home' %}">Home</a>
+				<a href="{% url 'blog:archive' %}">Archive</a>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<h3>Blog Post #1</h3>
+				<p>
+					Donec nec bibendum diam. Quisque efficitur, leo non commodo placerat,
+					metus erat pretium lectus, et fringilla ligula libero eu lacus. Ut libero
+					nisl, fermentum eu pretium sed, porta ut ligula. Etiam finibus, velit ut
+					facilisis blandit, dolor augue iaculis ex, sed mattis elit nunc ut purus.
+					Curabitur tellus velit, venenatis ac viverra nec, iaculis sed sem. Praesent
+					convallis ligula aliquam tortor scelerisque lobortis. Nam vel imperdiet erat.
+					Integer pellentesque quis sem et consectetur. Mauris bibendum aliquam nibh,
+					eget tincidunt magna commodo id. Vivamus sodales faucibus porta. Sed mollis
+					lacus arcu, at sagittis nunc molestie id. Nam pulvinar nulla sed porta eleifend.
+				</p>
+				<p>
+					Aliquam nec maximus nisi, a iaculis est. Vivamus dictum orci sit amet nulla
+					pharetra pulvinar. Vivamus auctor ex sit amet nulla molestie accumsan. Pellentesque
+					lorem elit, eleifend quis metus sit amet, sagittis mollis lectus. Ut in est sit amet
+					sem lobortis pretium. Ut rhoncus a justo eu mollis. Etiam in erat feugiat, tristique
+					massa et, laoreet velit. Nunc in malesuada est, a aliquet tellus. Donec dictum congue
+					nunc, a mollis turpis maximus id. Aenean luctus sit amet felis quis molestie. Quisque
+					venenatis nunc eget ipsum tincidunt vehicula. Nullam non ipsum tortor. Suspendisse
+					luctus auctor turpis a feugiat.
+				</p>
+				<p>
+					Proin vel ex scelerisque, molestie lacus at, elementum ligula. Praesent aliquam magna
+					ligula, in accumsan elit viverra vel. Nulla sit amet ipsum ornare, mattis magna vel,
+					egestas sapien. Nulla vitae consectetur magna. Vivamus gravida rhoncus ex non gravida.
+					Donec vel risus in nunc consectetur porttitor. Cras convallis odio ut turpis tincidunt
+					ornare.
+				</p>
+			</article>
+			<article>
+				<h3>Blog Post #2</h3>
+				<p>
+					Integer quis eros tortor. Maecenas sed congue purus. Cras non odio vehicula,
+					bibendum magna eu, feugiat magna. Nunc ut enim interdum, ultrices felis ut,
+					placerat felis. Nam nec augue neque. Donec condimentum dui non ante fringilla,
+					non finibus ipsum ultrices. Vestibulum tempus egestas neque, quis pellentesque
+					leo congue a. Pellentesque egestas efficitur metus, ac efficitur nisl imperdiet
+					eu. Donec a ultrices tellus, in tincidunt enim.
+				</p>
+				<p>
+					Vestibulum cursus facilisis sapien, eu auctor massa varius quis. Orci varius
+					natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus
+					sagittis sagittis congue. Curabitur tincidunt vel dolor et auctor. Nulla tristique lacus
+					eget dui condimentum, a facilisis elit consequat. Curabitur ultricies consectetur cursus.
+					Vivamus congue nisi at molestie pretium. Ut faucibus arcu sapien. Suspendisse tempor metus
+					sed lacus auctor luctus. Integer lobortis varius lectus, quis auctor sapien lobortis in.
+					Pellentesque vitae cursus tortor. Sed luctus scelerisque scelerisque. Nulla congue erat
+					quis vehicula auctor.
+				</p>
+				<p>
+					Nulla purus purus, rhoncus efficitur imperdiet non, volutpat et elit. Nulla nisi eros,
+					viverra et elementum nec, sollicitudin id orci. Nullam tincidunt interdum ante in semper.
+					Suspendisse vel ex ornare, lobortis ipsum iaculis, elementum dolor. Sed posuere, risus et
+					consectetur varius, est nulla malesuada tortor, ut consectetur nisi urna sed lacus. Morbi
+					mollis at mauris et dignissim. Maecenas molestie nibh pretium, hendrerit nibh commodo,
+					placerat elit. Maecenas quis consequat sapien. Proin tristique augue magna, fermentum accumsan
+					felis sodales non. Maecenas pellentesque orci ut lorem blandit, et venenatis dui bibendum.
+				</p>
+			</article>
+			<article>
+				<h3>Blog Post #3</h3>
+				<p>
+					Ut vitae vehicula ipsum. Maecenas interdum sollicitudin semper. Vestibulum
+					mattis eros eros, id pharetra eros iaculis vel. Morbi ornare purus mauris,
+					tincidunt laoreet tortor sollicitudin ut. Maecenas vel lobortis lorem, et
+					interdum ligula. In eu metus sit amet purus laoreet condimentum.
+					Pellentesque sodales in ipsum vitae congue.
+				</p>
+				<p>
+					Maecenas facilisis massa et mauris aliquam, in lacinia ipsum vulputate. Nullam
+					non rutrum purus. Fusce accumsan sapien mollis, vestibulum tortor quis, tincidunt
+					neque. Integer commodo condimentum libero at consectetur. Aliquam erat volutpat.
+					Suspendisse vulputate vulputate turpis varius vulputate. Integer vel suscipit ligula,
+					feugiat iaculis justo. Nam fermentum dui et lacus dignissim auctor. Nunc luctus maximus
+					aliquam. Maecenas semper metus dignissim magna vulputate lacinia. Mauris at est euismod,
+					mattis ipsum nec, faucibus leo. Donec feugiat id est ut rutrum. Fusce imperdiet neque urna,
+					ut malesuada elit dictum sit amet.
+				</p>
+				<p>
+					Fusce a consequat odio. Nulla facilisi. Suspendisse potenti. Nulla faucibus, arcu et
+					imperdiet sagittis, ligula mi sodales sapien, in consequat odio lacus id lectus. Pellentesque
+					neque leo, volutpat eget ornare sit amet, scelerisque et orci. Cras dolor nisl, consequat sit
+					amet libero ultricies, fringilla finibus arcu. Vivamus nec sapien ut libero convallis fermentum
+					in non erat. Curabitur condimentum venenatis orci, a vulputate dui elementum laoreet. Aliquam
+					vel dignissim sapien. Aenean ultricies est vel ex condimentum accumsan. Nam non sapien sed justo
+					ornare rutrum et scelerisque nisi. Sed arcu sapien, lobortis et nisi vel, volutpat pulvinar sem.
+					Sed at ligula dolor. Cras blandit metus mauris.
+				</p>
+			</article>
+		</main>
+		<aside>
+			<a href="{% url 'blog:star wars' %}">Star Wars Website</a>
+			<a href="{% url 'blog:air force' %}">US Air Force Website</a>
+			<a href="{% url 'blog:usu' %}">USU Website</a>
+		</aside>
+		<footer>
+			<p>Andrew Shaw</p>
+			<p>Copyright 2018 Andrew Shaw</p>
+			<p>{{ current_time }}</p>
+		</footer>
+	</body>
+</html>
